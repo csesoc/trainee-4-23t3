@@ -38,7 +38,7 @@ body {
   grid-column-start: 2;
   grid-column-end: 4;
   display:grid;
-  grid-template-rows: 1fr, 2fr;
+  grid-template-rows: 1fr 2fr;
 
 }
 
@@ -55,4 +55,6 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 30px;
+  border-style: solid;
+  border-color: aquamarine;
 }
