@@ -1,27 +1,40 @@
 import { useState } from 'react'
+import { atom, useRecoilState } from 'recoil';
+
+import DailyList from './components/dailies/DailyList';
+import ExtraTaskList from './components/extraTasks/ExtraTaskList';
+import History from './components/history/History';
+import ProgressBar from './components/progressBar/ProgressBar';
+import Timer from './components/timer/Timer';
+import Youtube from './components/youtube/Youtube';
 
 import './App.css'
-import SampleComponent from './components/sampleComponent/SampleComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <div id='grid-container'> 
+             
+        <div id='grid-top'>
+          <div id='grid-top-left'>
+            <DailyList/>
+            <Timer/>
+            <Youtube/>
+          </div>
 
-      <h1>Prodhub time</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+          <div id='grid-top-right'>
+            <History/>
+            <ExtraTaskList/>
+          </div>
+          
+        </div>
+
+        <div id='grid-bottom'>
+          <ProgressBar/>
+        </div>
+
       </div>
-      <p className="read-the-docs">
-        lezzgooooooo
-      </p>
-      <SampleComponent/>
     </>
   )
 }

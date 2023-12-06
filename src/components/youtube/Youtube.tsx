@@ -1,7 +1,7 @@
 import '../../App.css'
 // TEMP IMPORT REMOVE LATER
 
-const ProgressBar = () => {
+const Youtube = () => {
   return (
     <>
       <div id='temp-box'/>
@@ -9,4 +9,4 @@ const ProgressBar = () => {
   )
 }
 
-export default ProgressBar;
+export default Youtube;
