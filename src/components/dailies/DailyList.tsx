@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, createContext } from "react";
 import TaskItem from "./DailyItem";
 import ProgressBar from "../progressBar/ProgressBar";
 import "./DailyList.css"
@@ -9,8 +9,9 @@ interface item {
     isCompleted: boolean;
 };
 
+export const userContext = createContext<Array<item>>([]);
+
 function DailyTaskList() {
-    // still not complete
     const [tasks, setTasks] = useState(Array<item>);
     const divRef = useRef<HTMLDivElement>(null);
 
@@ -44,11 +45,12 @@ function DailyTaskList() {
     }
 
     return (
+      <userContext.Provider value={tasks}>
         <div className="dailyTaskList" ref={divRef}>
             <div className="dailies">
                 <div className="overlap">
                     <div className="rectangle"></div>
-                    <div className="border"></div>
+                    {/* <div className="border"></div> */}
                     <h2 className="Title">Daily Tasks</h2>
                     <div className="task-group">
                         <div className="tasks">
@@ -69,8 +71,9 @@ function DailyTaskList() {
                     </div>
                 </div>
             </div>
-            <ProgressBar tasks={tasks}/>
+            {/* <ProgressBar /> */}
         </div>
+      </userContext.Provider>
     );
 }
 

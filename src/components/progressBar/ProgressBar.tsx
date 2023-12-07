@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "./ProgressBar.css"
+import DailyTaskList from '../dailies/DailyList';
+import { userContext } from '../dailies/DailyList'
 
-interface ProgressBarProps {
-    tasks: any;
-}
+// interface ProgressBarProps {
+//     // tasks: any;
+// }
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ tasks }) => {
+const ProgressBar = () => {
+  const tasks = useContext(userContext);
     const calculatePercentage = (): number => {
+      console.log(tasks);
         const totalTasks = tasks.length;
         const completedTasks = tasks.filter((task) => task.isCompleted).length;
 

@@ -33,6 +33,10 @@ body {
   grid-template-rows: repeat(3, 1fr);
 }
 
+#component-wrapper {
+  padding: .5em;
+}
+
 #grid-top-right {
   border-style: solid;
   grid-column-start: 2;

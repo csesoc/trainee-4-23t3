@@ -18,7 +18,9 @@ function App() {
              
         <div id='grid-top'>
           <div id='grid-top-left'>
-            <DailyList/>
+            <div id='component-wrapper'>
+              <DailyList/>
+            </div>
             <Timer/>
             <Youtube/>
           </div>
@@ -29,10 +31,10 @@ function App() {
           </div>
           
         </div>
-{/* 
+
         <div id='grid-bottom'>
           <ProgressBar/>
-        </div> */}
+        </div>
 
       </div>
     </>
