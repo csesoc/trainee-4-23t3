@@ -29,10 +29,10 @@ function App() {
           </div>
           
         </div>
-
+{/* 
         <div id='grid-bottom'>
           <ProgressBar/>
-        </div>
+        </div> */}
 
       </div>
     </>

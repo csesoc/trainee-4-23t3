@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600&family=Poppins:ital,wght@0,400;0,500;1,600&family=Wallpoet&display=swap');
+
+.textBox {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: "Markazi Text", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    left: 20px;
+    margin-left: 35px;
+}
+
+.checkbox input {
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    user-select: none;
+}
+
+.taskItem .checkmark {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    height: 15px;
+    width: 15px;
+    background-color: #b3c0a4;
+    border: 3px solid;
+    border-color: #4a5043;
+    transform: rotate(-45deg);
+}
+
+.checkbox:hover input ~ .checkmark {
+    background-color: #4a5043;
+}
+
+.checkbox input:checked ~ .checkmark {
+    background-color: #4a5043;
+}
+
+.taskItem .delete-button {
+    opacity: 0%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.taskItem:hover .delete-button {
+    opacity: 100%;
+}
