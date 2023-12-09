@@ -7,6 +7,7 @@ import History from './components/history/History';
 import ProgressBar from './components/progressBar/ProgressBar';
 import Timer from './components/timer/Timer';
 import Youtube from './components/youtube/Youtube';
+import Github from './components/github/Github';
 
 import './App.css'
 
@@ -14,8 +15,8 @@ function App() {
 
   return (
     <>
-      <div id='grid-container'> 
-             
+      <div id='grid-container'>
+
         <div id='grid-top'>
           <div id='grid-top-left'>
             <DailyList/>
@@ -24,10 +25,11 @@ function App() {
           </div>
 
           <div id='grid-top-right'>
+            <Github/>
             <History/>
             <ExtraTaskList/>
           </div>
-          
+
         </div>
 
         <div id='grid-bottom'>
