@@ -1,12 +1,15 @@
-import '../../App.css'
-// TEMP IMPORT REMOVE LATER
+import "../../App.css";
+import ExtraTaskItem from "./ExtraTaskItem";
 
 const ExtraTaskList = () => {
   return (
     <>
-      <div id='temp-box'/>
+      <div id="temp-box">
+        <ExtraTaskItem></ExtraTaskItem>
+        <ExtraTaskItem></ExtraTaskItem>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default ExtraTaskList;

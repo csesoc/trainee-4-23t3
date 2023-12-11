@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600&family=Poppins:ital,wght@0,400;0,500;1,600&family=Wallpoet&display=swap");
+
+.big-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
+}
+.folder-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+}
+.upper-part {
+  display: flex;
+  flex-direction: row;
+}
+.time-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+}
+.start-time {
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+.dot {
+  margin-top: 8px;
+  margin-left: 120px;
+  height: 10px;
+  margin-bottom: 15px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+.end-time {
+  margin-top: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+.progression-bar {
+  margin-top: 37px;
+  margin-left: 10px;
+  border-radius: 5px;
+  width: 190px;
+  height: 20px;
+  background-color: rgb(45, 43, 43);
+  transform: skewX(30deg);
+}
+.tab {
+  margin-left: 200px;
+  margin-top: 30px;
+  border-bottom: 38px solid #b3c0a4;
+  border-top-left-radius: 50%;
+  border-right: 22px solid transparent;
+  height: 7px;
+  width: 120px;
+}
+.folder {
+  margin-left: 200px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  width: 350px;
+  background-color: #b3c0a4;
+  height: 125px;
+  border: 20px grey;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
