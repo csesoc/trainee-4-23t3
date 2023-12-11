@@ -1,8 +1,8 @@
 import '../../App.css'
-import Clock from './Clock';
+import Clock from './clock/Clock';
 import './Timer.css'
 import { useState } from 'react';
-import TimerSettings from './TimerSettings';
+import TimerSettings from './settings/TimerSettings';
 import TimerContext from './TimerContext';
 
 const Timer = () => {

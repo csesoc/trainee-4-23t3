@@ -1,0 +1,47 @@
+#settings-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #5c6652;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#status-text {
+    font-size: 12px;
+    margin: 0px;
+    font-weight: normal;
+    margin: 5px 10px 5px 10px;
+}
+
+.slider {
+    height: 0px;
+    width: 0px;
+    min-width: 60%;
+    border: 2px solid black;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.thumb {
+    background-color: white;
+    cursor: pointer;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg) translateY(-5px);
+    outline-style: solid;
+    outline-offset: 2px;
+    outline-width: 1px;
+    outline-color: white;
+}
+
+#slider-box {
+    width: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.5em;
+}

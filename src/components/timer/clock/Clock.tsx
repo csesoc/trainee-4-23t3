@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState, useRef } from "react";
-import TimerContext from "./TimerContext";
+import TimerContext from "../TimerContext";
+import './Clock.css';
 
 const Clock = () => {
     const timerInfo = useContext(TimerContext);
@@ -12,6 +13,7 @@ const Clock = () => {
     const currTimeRef = useRef(currTime);
     const isStudyingRef = useRef(isStudying)
 
+    // doesnt work without useRef send help
     useEffect(() => {
         const transition = () => {
             const newIsStudying = !isStudyingRef.current;
@@ -50,13 +52,18 @@ const Clock = () => {
     const clockDigit = ((time:number) => time < 10 ? '0'+time : time);
 
     return (
-        <>
-            {isStudying ? <h2>Study</h2> : <h2>Break</h2>}
-            <h1>{`${mins} : ${clockDigit(secs)}`}</h1>
-            <button onClick={() => {isPausedRef.current = !isPaused; setisPaused(isPausedRef.current)}}>{isPaused ? "Start" : "Pause"}</button>
-            <button onClick={() => reset()}>Reset</button>
-            <button onClick={() => timerInfo.setShowSettings(true)}>Settings</button>
-        </>
+        <div id="clock-container">
+            <div id="clock-left">
+                {isStudying ? <h2 id='status-text'>back to work...</h2> : <h2 id='status-text'>time for a break!</h2>}
+                <h1 id='digit-text'>{`${mins} : ${clockDigit(secs)}`}</h1>
+            </div>
+
+            <div id="clock-right">
+                <button id='clock-button' onClick={() => {isPausedRef.current = !isPaused; setisPaused(isPausedRef.current)}}>{isPaused ? "Start" : "Pause"}</button>
+                <button id='clock-button' onClick={() => reset()}>Reset</button>
+                <button id='clock-button' onClick={() => timerInfo.setShowSettings(true)}>Settings</button>
+            </div>
+        </div>
     )
 }
 
