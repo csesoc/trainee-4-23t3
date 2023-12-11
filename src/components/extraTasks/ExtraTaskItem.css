@@ -53,7 +53,7 @@
   transform: skewX(30deg);
 }
 .tab {
-  margin-left: 200px;
+  margin-left: 90px;
   margin-top: 30px;
   border-bottom: 38px solid #b3c0a4;
   border-top-left-radius: 50%;
@@ -62,7 +62,7 @@
   width: 120px;
 }
 .folder {
-  margin-left: 200px;
+  margin-left: 90px;
   margin-top: 2px;
   margin-bottom: 20px;
   width: 350px;
