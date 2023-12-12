@@ -1,4 +1,4 @@
-import '../../App.css'
+import '../github/Github.css'
 import scale from '../../assets/github.png'
 
 const Github = () => {
@@ -53,7 +53,7 @@ const Github = () => {
   return (
     <>
       <div className='github-total-container'>
-        <p className="yaxis">
+        <p className="xaxis">
           <span className="nowrap">Jan</span>
           <span className="nowrap">Feb</span>
           <span className="nowrap">March</span>
