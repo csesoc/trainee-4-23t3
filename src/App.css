@@ -30,7 +30,6 @@ body {
   grid-column-end: 2;
   display:grid;
   grid-template-rows: 2fr 1fr 2fr;
-
 }
 
 #grid-top-right {
