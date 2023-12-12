@@ -30,10 +30,10 @@
 }
 .dot {
   margin-top: 8px;
-  margin-left: 120px;
+  margin-left: 0px; /*120px*/
   height: 10px;
   margin-bottom: 15px;
-  width: 10px;
+  width: 0px; /*10px*/
   background-color: #bbb;
   border-radius: 50%;
 }
@@ -45,27 +45,27 @@
 }
 .progression-bar {
   margin-top: 37px;
-  margin-left: 10px;
+  margin-left: 0; /*10px*/
   border-radius: 5px;
-  width: 190px;
+  width: 0px; /*190px*/
   height: 20px;
   background-color: rgb(45, 43, 43);
   transform: skewX(30deg);
 }
 .tab {
-  margin-left: 90px;
+  margin-left: 0px; /*90px*/
   margin-top: 30px;
   border-bottom: 38px solid #b3c0a4;
   border-top-left-radius: 50%;
   border-right: 22px solid transparent;
   height: 7px;
-  width: 120px;
+  width: 0px; /*120px*/
 }
 .folder {
-  margin-left: 90px;
+  margin-left: 0px; /*90px*/
   margin-top: 2px;
   margin-bottom: 20px;
-  width: 350px;
+  width: 0px; /*350px*/
   background-color: #b3c0a4;
   height: 125px;
   border: 20px grey;
