@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import YouTube, {YouTubeProps} from 'react-youtube';
 import './Youtube.css';
 
@@ -9,7 +9,7 @@ const Youtube = () => {
   
   const opts: YouTubeProps['opts'] = {
     height: '100%',
-    width: '40%',
+    width: '80%',
     playerVars: {
       autoplay: 1,
     }

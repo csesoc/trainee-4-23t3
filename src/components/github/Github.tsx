@@ -20,16 +20,6 @@ const Github = () => {
   let idx = 1;
   if (isLeapYear()) {
     while (idx <= 366) {
-      // if (idx % 5) {
-      //   let dateString = getDateFromDayOfYear(idx);
-      //   githubHash.set(dateString, 0);
-      // } else if (idx % 6) {
-      //   let dateString = getDateFromDayOfYear(idx);
-      //   githubHash.set(dateString, 2);
-      // } else {
-      //   let dateString = getDateFromDayOfYear(idx);
-      //   githubHash.set(dateString, 4);
-      // }
       let dateString = getDateFromDayOfYear(idx);
       githubHash.set(dateString, 0);
       idx = idx + 1
@@ -47,7 +37,7 @@ const Github = () => {
       //   githubHash.set(dateString, 4);
       // }
       let dateString = getDateFromDayOfYear(idx);
-      githubHash.set(dateString, 0);
+      githubHash.set(dateString, Math.floor(Math.random() * 5));
       idx = idx + 1
     }
   }

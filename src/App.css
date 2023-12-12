@@ -16,8 +16,6 @@ body {
 }
 
 #grid-top {
-  border-style: solid;
-  border-color: red;
   grid-row-start: 1;
   grid-row-end: 6;
   height:100%;
@@ -25,7 +23,6 @@ body {
 }
 
 #grid-top-left {
-  border-style: solid;
   grid-column-start: 1;
   grid-column-end: 2;
   display:grid;
@@ -33,7 +30,6 @@ body {
 }
 
 #grid-top-right {
-  border-style: solid;
   grid-column-start: 2;
   grid-column-end: 4;
   display:grid;
