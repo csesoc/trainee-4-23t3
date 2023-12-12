@@ -33,7 +33,7 @@ const Clock = () => {
         if (currTimeRef.current === 0) {transition();}
 
         tick();
-      }, 100);
+      }, 1000);
       return () => clearInterval(interval);
     }, [timerInfo]
   )
