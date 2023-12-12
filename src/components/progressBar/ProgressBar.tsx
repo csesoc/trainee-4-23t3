@@ -1,20 +1,12 @@
-import {useContext} from 'react';
 import "./ProgressBar.css"
-import { userContext } from '../dailies/DailyList'
-
-// interface ProgressBarProps {
-//     // tasks: any;
-// }
+import { useStoreContext } from '../../context/TaskContext';
 
 const ProgressBar = () => {
-  const tasks = useContext(userContext);
-    const calculatePercentage = (): number => {
-      console.log(tasks);
-        const totalTasks = tasks.length;
-        const completedTasks = tasks.filter((task) => task.isCompleted).length;
+  const {completed, totalTasks} = useStoreContext();
 
-        return totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
-    };
+	const calculatePercentage = (): number => {
+		return Math.min(totalTasks > 0 ? Math.round((completed / totalTasks) * 100) : 0, 100);
+	};
 
     const completionPercentage = calculatePercentage();
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, createContext } from "react";
 import TaskItem from "./DailyItem";
 import "./DailyList.css"
+import { useStoreContext } from "../../context/TaskContext";
 
 interface item {
 	id: number;
@@ -11,6 +12,7 @@ interface item {
 export const userContext = createContext<Array<item>>([]);
 
 function DailyTaskList() {
+	const {setTotalTasks} = useStoreContext();
 	const [tasks, setTasks] = useState(Array<item>);
 	const divRef = useRef<HTMLDivElement>(null);
 
@@ -35,12 +37,14 @@ function DailyTaskList() {
 
 		newTasks.push(taskObject);
 		setTasks(newTasks);
+		setTotalTasks(prevTotal => prevTotal + 1);
 	};
 
 	const deleteDailyTask = (taskId: number, event: any) => {
 		const updatedTasks = tasks.filter((task) => task.id !== taskId);
 
 		setTasks(updatedTasks);
+		setTotalTasks(prevTotal => prevTotal - 1);
 	}
 
 	return (

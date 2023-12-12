@@ -1,5 +1,4 @@
 import '../github/Github.css'
-import scale from '../../assets/github.png'
 
 const Github = () => {
   function getDateFromDayOfYear(dayOfYear: number) {
