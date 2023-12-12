@@ -92,12 +92,12 @@ const Github = () => {
             )
             ))}
           </div>
-          <div className='position-github-scale'>
+        </div>
+        <div className='position-github-scale'>
             <span className='span-github-scale-style-less'>Less</span>&nbsp;&nbsp;
             <img className='github-scale-style' src={scale} alt="Description of the image" />
             &nbsp;&nbsp;<span className='span-github-scale-style-more'>More</span>
           </div>
-        </div>
       </div>
     </>
   )
