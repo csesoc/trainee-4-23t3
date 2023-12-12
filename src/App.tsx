@@ -21,8 +21,8 @@ function App() {
           </div>
 
           <div id='grid-top-right'>
-            <History/>
-            <ExtraTaskList/>
+          <History/>
+          <ExtraTaskList/>
           </div>
           
         </div>

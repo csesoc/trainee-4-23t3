@@ -7,7 +7,6 @@
     min-height: 90%;
     display: flex;
     flex-direction: column;
-    padding: 1% 5% 0 5%;
 }
 
 .progress-bar {

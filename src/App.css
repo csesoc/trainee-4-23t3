@@ -22,7 +22,6 @@ body {
   grid-row-end: 6;
   height:100%;
   display: grid;
-  display:grid;
 }
 
 #grid-top-left {
