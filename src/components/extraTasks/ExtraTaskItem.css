@@ -5,12 +5,13 @@
   flex-direction: row;
   width: 100%;
   height: 50%;
+  margin-bottom: 15%;
 }
 .folder-container {
   display: flex;
   flex-direction: column;
   width: 80%;
-  height: 100%;
+  height: 200%;
 }
 .upper-part {
   display: flex;
@@ -22,39 +23,41 @@
   justify-content: center;
   width: 20%;
   height: 100%;
+  margin-left: 10%
 }
 .start-time {
-  margin-top: 0%; /*30px*/
+  margin-top: 72%; /*30px*/
   font-size: 25px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
 }
 .dot {
-  margin-top: 0.5vh; /*8px*/
-  margin-left: 50%; /*120px*/
-  height: 3%; /*10px*/
+  margin-top: 2vh; /*8px*/
+  margin-left: 35%; /*120px*/
+  height: 10px; /*10px*/
   margin-bottom: 0px; /*15px*/
-  width: 3%; /*10px*/
-  background-color: #bbb;
+  width: 10px; /*10px*/
+  background-color: rgb(45, 43, 43); /*#bb*/
   border-radius: 50%;
+  display: column;
 }
 .end-time {
-  margin-top: 0%;
+  margin-top: 15%;
   font-size: 25px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
 }
 .progression-bar {
-  margin-top: 4%; /*37px*/
+  margin-top: 4.2%; /*37px*/
   margin-left: 0; /*10px*/
   border-radius: 5px;
-  width: 23%; /*190px*/
-  height: 30%; /*20px*/
+  width: 31.5%; /*190px*/
+  height: 35%; /*20px*/
   background-color: rgb(45, 43, 43);
   transform: skewX(30deg);
 }
 .tab {
-  margin-left: 20%; /*90px*/
+  margin-left: 10%; /*90px*/
   margin-top: 4%; /*30px*/
   border-bottom: 38px solid #b3c0a4;
   border-top-left-radius: 20%;
@@ -63,13 +66,101 @@
   width: 14%; /*120px*/
 }
 .folder {
-  margin-left: 20%; /*90px*/
+  margin-left: 10%; /*90px*/
   margin-top: 0.3%; /*2px*/
   margin-bottom: 0px; /*20px*/
-  width: 40%; /*350px*/
+  width: 50%; /*350px*/
   background-color: #b3c0a4;
-  height: 50%; /*125px*/
+  height: 100%; /*125px*/
   border: 20px grey;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* skullllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll*/
+
+.textBox {
+  border-color: transparent;
+  background-color: transparent;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 70%;
+  height: 20px;
+  align-self: center;
+  margin: 0px;
+  margin-left: 5%;
+  overflow: wrap;
+}
+
+.timeBox {
+  border-color: transparent;
+  background-color: transparent;
+  font-family: "Markazi Text", Helvetica;
+  font-weight: 600;
+  color: rgb(45, 43, 43);
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 70%;
+  height: 20px;
+  align-self: center;
+  margin: 0px;
+  margin-left: 5%;
+  overflow: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox input {
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  top: 7px;
+  left: 0;
+}
+
+.checkmark {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  background-color: #b3c0a4;
+  border: 2px solid;
+  border-color: #4a5043;
+  transform: rotate(-45deg);
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #4a5043;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #4a5043;
+}
+
+.delete-button {
+  opacity: 0%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  height: 20%
+}
+
+.delete-button {
+  opacity: 100%;
 }
