@@ -1,5 +1,4 @@
 import '../github/Github.css'
-import scale from '../../assets/github.png'
 
 const Github = () => {
   function getDateFromDayOfYear(dayOfYear: number) {
@@ -15,7 +14,7 @@ const Github = () => {
   }
 
   let githubHash = new Map<String, Number>();
-  let monthsXAxis: string[] = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+  let monthsXAxis: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 
   let idx = 1;
@@ -92,12 +91,16 @@ const Github = () => {
             )
             ))}
           </div>
-          <div className='position-github-scale'>
-            <span className='span-github-scale-style-less'>Less</span>&nbsp;&nbsp;
-            <img className='github-scale-style' src={scale} alt="Description of the image" />
-            &nbsp;&nbsp;<span className='span-github-scale-style-more'>More</span>
-          </div>
         </div>
+        <div className='position-github-scale'>
+            <p className='github-scale-text'>Less</p>
+            <div className="column-4 github-scale-0"/>
+            <div className="column-4 github-scale-1"/>
+            <div className="column-4 github-scale-2"/>
+            <div className="column-4 github-scale-3"/>
+            <div className="column-4 github-scale-4"/>
+            <p className='github-scale-text'>More</p>
+          </div>
       </div>
     </>
   )

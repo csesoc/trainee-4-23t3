@@ -1,3 +1,4 @@
+import { useStoreContext } from "../../context/TaskContext";
 import "./DailyItem.css"
 
 type deleteTaskFunction = (taskId: number, event: any) => void;
@@ -10,6 +11,7 @@ interface DailiesItemObject {
 }
 
 const TaskItem = (props: DailiesItemObject) => {
+    const {setCompleted} = useStoreContext();
   
     let task = props.tasks.find((item) => item.id === props.taskId);
 
@@ -26,10 +28,17 @@ const TaskItem = (props: DailiesItemObject) => {
     };
 
     const handleChecked = () => {
+        const prevDone = props.tasks.filter((t) => t.isCompleted).length;
+
         const newTasks = props.tasks.map((t) =>
             t.id === props.taskId ? { ...t, isCompleted: !t.isCompleted } : t     
         );
         props.setTasks(newTasks);
+
+        const newDone = newTasks.filter((t) => t.isCompleted).length;
+
+        setCompleted(prevComplete => prevComplete - prevDone + newDone);
+
     };
 
     return (
