@@ -1,0 +1,114 @@
+.github-scale-0 {
+    background-color:#E0DFDF;
+    border-radius: 4px;
+}
+.github-scale-1 {
+    background-color:#39D353;
+    border-radius: 4px;
+}
+.github-scale-2 {
+    background-color:#26A641;
+    border-radius: 4px;
+}
+.github-scale-3 {
+    background-color:#016C31;
+    border-radius: 4px;
+}
+.github-scale-4 {
+    background-color:#0D4429;
+    border-radius: 4px;
+}
+
+.nowrap {
+    white-space: 10px;
+    font-size: 30px;
+    padding-right: 40px;
+    display: inline;
+}
+
+.xaxis {
+    position: relative;
+    top: -20px;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap:nowrap;
+    /* overflow:scroll; */
+    width: 100%;
+}
+
+.column-4 {
+    width: 15px;
+    height: 15px;
+}
+
+.github-container {
+    display: flex;
+    gap: 6px 6px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    height: 150px;
+    width: 1130px;
+    position: relative;
+    top: -20px;
+    overflow: hidden;
+}
+.scroll {
+    overflow: scroll;
+}
+
+.github-total-container {
+    width: 0;
+    min-width: 90%;
+    height: 0;
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 5% 0% 5%;
+    overflow: hidden;
+}
+
+
+.position-github-scale {
+    display: flex;
+    position: relative;
+    bottom: 10px;
+}
+
+.span-github-scale-style-less {
+    position: relative;
+    bottom: -7px;
+}
+
+.span-github-scale-style-more {
+    position: relative;
+    bottom: -7px;
+}
+
+.github-scale-style {
+    width: 130px;
+    height: 40px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.column-4:hover::after {
+    content: attr(data-tooltip);
+    position: fixed;
+    top: 23%;
+    left: 60%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0.8;
+    z-index: 1;
+    display: block;
+}
