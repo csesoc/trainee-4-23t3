@@ -21,15 +21,13 @@
 
 .nowrap {
     white-space: 10px;
-    font-size: 20px;
-    padding-right: 40px;
+    font-size: 12px;
+    padding-right: 5.3em;
     display: inline;
 }
 
 .xaxis {
-    position: relative;
-    top: -20px;
-    right: -40px;
+    padding-bottom: 10px;
     display: flex;
     /* flex-direction: column; */
     flex-wrap:nowrap;
@@ -38,8 +36,8 @@
 }
 
 .column-4 {
-    width: 15px;
-    height: 15px;
+    width: 1em;
+    height: 1em;
 }
 
 .github-container {
@@ -47,17 +45,23 @@
     gap: 4px 4px;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-content: flex-start;
-    height: 130px;
+    max-height: 140px;
     width: 1100px;
     position: relative;
     top: -20px;
     overflow: hidden;
 }
+
 .scroll {
     overflow: scroll;
+    width: 100%;
 }
+
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
 
 .github-total-container {
     width: 0;
@@ -70,24 +74,21 @@
     overflow: hidden;
 }
 
-
 .position-github-scale {
     display: flex;
-    position: relative;
-    top: 10px;
+    flex-direction: row;
+    gap: 4px 3px;
 }
 
-.span-github-scale-style-less {
-    position: relative;
-    bottom: -7px;
+.github-scale-text {
+    line-height: 0%;
+    margin: 5px;
+    font-size: 12px;
 }
 
-.span-github-scale-style-more {
-    position: relative;
-    bottom: -7px;
-}
 
 .github-scale-style {
+    margin-top: 2%;
     width: 130px;
     height: 40px;
 }
@@ -112,4 +113,5 @@
     opacity: 0.8;
     z-index: 1;
     display: block;
+    font-size: 12px;
 }
