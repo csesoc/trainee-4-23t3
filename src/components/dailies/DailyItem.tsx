@@ -13,7 +13,7 @@ interface DailiesItemObject {
 const TaskItem = (props: DailiesItemObject) => {
     const {setCompleted} = useStoreContext();
   
-    let task = props.tasks.find((item) => item.id === props.taskId);
+    let task = props.tasks.find((item : any) => item.id === props.taskId);
 
     if (!task) {
         console.error(`Task with ID ${props.taskId} not found`);
@@ -21,21 +21,21 @@ const TaskItem = (props: DailiesItemObject) => {
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const newTasks = props.tasks.map((t) =>
+        const newTasks = props.tasks.map((t : any) =>
             t.id === props.taskId ? { ...t, task: event.target.value } : t
         );
         props.setTasks(newTasks);
     };
 
     const handleChecked = () => {
-        const prevDone = props.tasks.filter((t) => t.isCompleted).length;
+        const prevDone = props.tasks.filter((t : any) => t.isCompleted).length;
 
-        const newTasks = props.tasks.map((t) =>
+        const newTasks = props.tasks.map((t : any) =>
             t.id === props.taskId ? { ...t, isCompleted: !t.isCompleted } : t     
         );
         props.setTasks(newTasks);
 
-        const newDone = newTasks.filter((t) => t.isCompleted).length;
+        const newDone = newTasks.filter((t : any) => t.isCompleted).length;
 
         setCompleted(prevComplete => prevComplete - prevDone + newDone);
 
