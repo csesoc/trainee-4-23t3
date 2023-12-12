@@ -1,89 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600&family=Poppins:ital,wght@0,400;0,500;1,600&family=Wallpoet&display=swap');
 
 .dailyTaskList {
-    width: 100%;
-    height: 100%;
-}
+    width: 0px;
+    min-width: 80%;
+    height: 0px;
+    min-height: 90%;
+    margin: 5%;
+    padding: 0em 5% 0em 5%;
 
-.dailyTaskList .dailies {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform: rotate(0.52deg);
-}
 
-.dailyTaskList .overlap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.dailyTaskList .rectangle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 2px;
-    left: 1px;
     background-color: #c0b4a4;
     border-radius: 15px;
-    transform: rotate(-0.52deg);
-
     outline-style: solid;
     outline-color: #c0b4a4;
-    outline-width: 4px;
-    outline-offset: 3px;
-}
+    outline-width: 2px;
+    outline-offset: 2px;
 
-.dailyTaskList .border {
-    position: absolute;
-    width: 479px;
-    height: 255px;
-    top: 8px;
-    left: 6px;
-    background-color: #c0b4a4;
-    border-radius: 10px;
-    border: 5px solid;
-    border-color: #4a5043;
-    transform: rotate(-0.52deg);
+    display: flex;
+    flex-direction: column;
 }
 
 .dailyTaskList .add-button {
-    position: absolute;
     background-color: transparent;
-    top: 170px;
-    left: 24px;
     font-family: "Markazi Text", Helvetica;
     font-weight: 600;
     color: #5a6650;
-    font-size: 24px;
+    font-size: 16px;
     letter-spacing: 0;
     line-height: normal;
+    text-align: left;
+    width: 100%;
 }
 
 .dailyTaskList .Title {
-    position: absolute;
-    top: -10px; 
-    left: 42px;
     font-family: "Markazi Text", Helvetica;
     font-weight: 600;
     color: #4a5043;
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
+    text-align: left;
+    margin-bottom: 0.2em;
 }
 
-.dailyTaskList .task-group {
-    max-height: 250px;
-}
-
-.dailyTaskList .tasks {
-    position: absolute;
-    top: 60px;
-    left: 80px;
-    max-height: 125px; 
+.tasks {
+    min-height: 50%;
+    max-height: 50%; 
     overflow-y: auto;
+
     &::-webkit-scrollbar {
         width: 8px;
     }

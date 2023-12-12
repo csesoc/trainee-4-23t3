@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import { atom, useRecoilState } from 'recoil';
-
 import DailyList from './components/dailies/DailyList';
 import ExtraTaskList from './components/extraTasks/ExtraTaskList';
 import History from './components/history/History';
@@ -18,10 +15,8 @@ function App() {
              
         <div id='grid-top'>
           <div id='grid-top-left'>
-            <div id='component-wrapper'>
-              <DailyList/>
-            </div>
-            <Timer/>
+            <div id='component-container'><DailyList/></div>
+            <div id='component-container'><Timer/></div>
             <Youtube/>
           </div>
 

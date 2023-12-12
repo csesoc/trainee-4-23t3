@@ -1,40 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600&family=Poppins:ital,wght@0,400;0,500;1,600&family=Wallpoet&display=swap');
 
 .textBox {
-    border: none;
     border-color: transparent;
     background-color: transparent;
     font-family: "Markazi Text", Helvetica;
     font-weight: 600;
     color: #000000;
-    font-size: 24px;
+    font-size: 16px;
     letter-spacing: 0;
     line-height: normal;
-    left: 20px;
-    margin-left: 35px;
+    width: 70%;
+    height: 20px;
+    align-self: center;
+    margin: 0px;
+    margin-left: 5%;
+    overflow: wrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
 }
 
 .checkbox input {
     height: 0;
     width: 0;
-    position: absolute;
 }
 
 .checkbox {
     display: block;
     position: relative;
-    font-size: 22px;
-    user-select: none;
+    top: 7px;
+    left: 0;
 }
 
 .taskItem .checkmark {
     position: absolute;
-    top: 8px;
-    left: 5px;
-    height: 15px;
-    width: 15px;
+    height: 7px;
+    width: 7px;
     background-color: #b3c0a4;
-    border: 3px solid;
+    border: 2px solid;
     border-color: #4a5043;
     transform: rotate(-45deg);
 }
