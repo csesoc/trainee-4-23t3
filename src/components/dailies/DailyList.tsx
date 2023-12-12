@@ -12,7 +12,7 @@ interface item {
 export const userContext = createContext<Array<item>>([]);
 
 function DailyTaskList() {
-	const {setTotalTasks} = useStoreContext();
+	const {setTotalTasks, setCompleted} = useStoreContext();
 	const [tasks, setTasks] = useState(Array<item>);
 	const divRef = useRef<HTMLDivElement>(null);
 
@@ -41,10 +41,13 @@ function DailyTaskList() {
 	};
 
 	const deleteDailyTask = (taskId: number, event: any) => {
+		const prevDone = tasks.filter((t) => t.isCompleted).length;
 		const updatedTasks = tasks.filter((task) => task.id !== taskId);
+		const newDone = updatedTasks.filter(t => t.isCompleted).length;
 
 		setTasks(updatedTasks);
 		setTotalTasks(prevTotal => prevTotal - 1);
+		setCompleted(prevComplete => prevComplete - prevDone + newDone);
 	}
 
 	return (
