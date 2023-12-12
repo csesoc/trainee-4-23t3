@@ -1,6 +1,5 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import "./ProgressBar.css"
-import DailyTaskList from '../dailies/DailyList';
 import { userContext } from '../dailies/DailyList'
 
 // interface ProgressBarProps {
@@ -21,6 +20,9 @@ const ProgressBar = () => {
 
     return (
         <div className='progress-container'>
+            <div className='progress-text'>
+                progress {completionPercentage}%
+            </div>
             <div className='progress-bar'>
                 <div 
                 className='progress'
@@ -28,9 +30,6 @@ const ProgressBar = () => {
                     width: `${completionPercentage}%`
                 }}
                 ></div>
-            </div>
-            <div className='progress-text'>
-                progress {completionPercentage}%
             </div>
         </div>
     );

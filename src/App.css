@@ -43,8 +43,6 @@ body {
 }
 
 #grid-bottom {
-  border-style: solid;
-  border-color: red;
   grid-row-start: 6;
   grid-row-end: 7;
   height: 100%;

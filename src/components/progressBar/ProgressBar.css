@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600&family=Poppins:ital,wght@0,400;0,500;1,600&family=Wallpoet&display=swap');
 
+.progress-container {
+    width: 0;
+    min-width: 90%;
+    height: 0;
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 5% 0 5%;
+}
+
 .progress-bar {
-    position:absolute;
-    width: 95%;
-    height: 16px;
-    top: 834px;
-    left: 47px;
-    background-color: #2e2b2bb5;
-    border-radius: 0px 400px 0px 400px;
+    width: 100%;
+    height: 10px;
+    background-color: #000000b5;
+    border-radius: 5px;
     border: 2px solid;
-    border-color: #000000;
+    border-color: #b58f6a;
     margin: 20px 0;
     overflow: hidden;
 }
 
 .progress {
     height: 100%;
-    background-color: #5f2929;
+    background-color: #8d3a2b;
     transition: width 0.3s ease-in-out;
 }
 
 .progress-text {
-    position: absolute;
-    top: 800px;
-    left: 60px;
+    text-align: left;
+    margin-bottom: -15px;
     font-family: "Markazi Text", Helvetica;
-    font-weight: 600;
+    font-weight: lighter;
     color: #ffffff;
-    font-size: 32px;
+    font-size: 24px;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
