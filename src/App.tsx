@@ -19,7 +19,7 @@ function App() {
         <div id='grid-top'>
           <div id='grid-top-left'>
             <DailyList/>
-            <Timer/>
+            <div id='component-container'><Timer/></div>
             <Youtube/>
           </div>
 
