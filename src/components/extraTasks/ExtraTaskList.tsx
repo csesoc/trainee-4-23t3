@@ -7,6 +7,7 @@ import "./ExtraTaskList.css"
 interface item {
 	id: number;
 	task: string;
+	notes: string;
 	isCompleted: boolean;
 };
 
@@ -22,6 +23,7 @@ function ExtraTaskList() {
 			{
 				id: Math.max(0, ...tasks.map((item) => item.id)) + 1,
 				task: "",
+				notes: "",
 				isCompleted: false,
 			},
 		]);
@@ -33,6 +35,7 @@ function ExtraTaskList() {
 		let taskObject = {
 			id: Math.max(0, ...tasks.map((item) => item.id)) + 1,
 			task: "",
+			notes: "",
 			isCompleted: false,
 		};
 
@@ -54,8 +57,6 @@ function ExtraTaskList() {
   return (
     <userContext.Provider value={tasks}>
     <div className="extraTaskList" ref={divRef}>
-      <h2 className="Title">Tasks</h2>
-
       <div className="extratasks">
         {tasks.map((item: item) => (
           <ExtraTaskItem

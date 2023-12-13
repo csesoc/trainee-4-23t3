@@ -3,46 +3,50 @@
 .big-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 95%;
   height: 50%;
-  margin-bottom: 15%;
+  padding:2%;
+  align-self: center;
+  justify-self: center;
 }
+
 .folder-container {
   display: flex;
   flex-direction: column;
   width: 80%;
-  height: 200%;
+  height: 100%;
 }
+
 .upper-part {
   display: flex;
   flex-direction: row;
 }
+
 .time-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 20%;
+  width: 15%;
+  padding-left: 5%;
   height: 100%;
-  margin-left: 10%
+  align-items: center;
+  justify-items: center;
 }
+
 .start-time {
-  margin-top: 72%; /*30px*/
   font-size: 25px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
 }
 .dot {
-  margin-top: 2vh; /*8px*/
-  margin-left: 35%; /*120px*/
+  margin: 2%; /*120px*/
   height: 10px; /*10px*/
-  margin-bottom: 0px; /*15px*/
   width: 10px; /*10px*/
-  background-color: rgb(45, 43, 43); /*#bb*/
-  border-radius: 50%;
   display: column;
+  color: whitesmoke;
 }
 .end-time {
-  margin-top: 15%;
+  margin-top: 0.5em;
   font-size: 25px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
@@ -51,15 +55,15 @@
   margin-top: 4.2%; /*37px*/
   margin-left: 0; /*10px*/
   border-radius: 5px;
-  width: 31.5%; /*190px*/
-  height: 35%; /*20px*/
+  width: 60%; /*190px*/
+  height: 30%; /*20px*/
   background-color: rgb(45, 43, 43);
   transform: skewX(30deg);
 }
 .tab {
   margin-left: 10%; /*90px*/
   margin-top: 4%; /*30px*/
-  border-bottom: 38px solid #b3c0a4;
+  border-bottom: 38px solid #c0b4a4;
   border-top-left-radius: 20%;
   border-right: 22px solid transparent;
   height: 1%; /*7px*/
@@ -69,15 +73,20 @@
   margin-left: 10%; /*90px*/
   margin-top: 0.3%; /*2px*/
   margin-bottom: 0px; /*20px*/
-  width: 50%; /*350px*/
-  background-color: #b3c0a4;
+  width: 80%; /*350px*/
+  background-color: #c0b4a4;
   height: 100%; /*125px*/
-  border: 20px grey;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+}
+
+.folder-top {
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
 }
 /* skullllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll*/
 
@@ -86,7 +95,7 @@
   background-color: transparent;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  color: #000000;
+  color: #656f5c;
   font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
@@ -98,21 +107,36 @@
   overflow: wrap;
 }
 
+.notesBox {
+  border-color: transparent;
+  background-color: transparent;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: #656f5c;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 70%;
+  height: 20px;
+  align-self: flex-start;
+  margin: 0px;
+  margin-left: 12%;
+  overflow: wrap;
+}
+
 .timeBox {
   border-color: transparent;
   background-color: transparent;
   font-family: "Markazi Text", Helvetica;
   font-weight: 600;
-  color: rgb(45, 43, 43);
-  font-size: 32px;
+  font-size: 24px;
   letter-spacing: 0;
   line-height: normal;
-  width: 70%;
+  width: 50%;
   height: 20px;
-  align-self: center;
   margin: 0px;
-  margin-left: 5%;
   overflow: wrap;
+  text-align: center;
 }
 
 .item {

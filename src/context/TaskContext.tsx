@@ -18,7 +18,7 @@ export const StoreContext = React.createContext<IStoreContext>({
 export default ({ children }) => {
 
   const [completed, setCompleted] = React.useState(0);
-  const [totalTasks, setTotalTasks] = React.useState(1);
+  const [totalTasks, setTotalTasks] = React.useState(2);
 
   return (
     <StoreContext.Provider value={{
