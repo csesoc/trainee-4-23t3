@@ -25,7 +25,7 @@ const Github = () => {
       idx = idx + 1
     }
   } else {
-    while (idx <= 365) {
+    while (idx <= 346) {
       // if (idx % 5) {
       //   let dateString = getDateFromDayOfYear(idx);
       //   githubHash.set(dateString, 0);
@@ -40,6 +40,12 @@ const Github = () => {
       githubHash.set(dateString, Math.floor(Math.random() * 5));
       idx = idx + 1
     }
+  }
+
+  while(idx <= 365) {
+    let dateString = getDateFromDayOfYear(idx);
+      githubHash.set(dateString, 0);
+      idx = idx + 1
   }
 
   return (

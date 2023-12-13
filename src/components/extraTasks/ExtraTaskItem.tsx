@@ -10,7 +10,6 @@ interface ExtraTaskItemObject {
     deleteTask: deleteTaskFunction;
 }
 
-
 const ExtraTaskItem = (props: ExtraTaskItemObject) => {
   const {setCompleted} = useStoreContext();
   
@@ -28,6 +27,13 @@ const ExtraTaskItem = (props: ExtraTaskItemObject) => {
       props.setTasks(newTasks);
   };
 
+  const handleNotes = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newTasks = props.tasks.map((t : any) =>
+        t.id === props.taskId ? { ...t, notes: event.target.value } : t
+    );
+    props.setTasks(newTasks);
+  };
+
   const handleChecked = () => {
       const prevDone = props.tasks.filter((t : any) => t.isCompleted).length;
 
@@ -39,7 +45,6 @@ const ExtraTaskItem = (props: ExtraTaskItemObject) => {
       const newDone = newTasks.filter((t : any) => t.isCompleted).length;
 
       setCompleted(prevComplete => prevComplete - prevDone + newDone);
-
   };
 
   return (
@@ -53,14 +58,15 @@ const ExtraTaskItem = (props: ExtraTaskItemObject) => {
           style={{
               textDecorationLine: task.isCompleted ? "line-through" : "none",
               pointerEvents: task.isCompleted ? "none" : "initial",
-              color: task.isCompleted ? "#656f5c" : "#000000"
+              color: task.isCompleted ? "#656f5c" : "#f5f5f5"
           }}
           disabled={task.isCompleted}
         />
         </div>
-        <span className="dot">⠀</span>
-        <span className="dot">⠀</span>
-        <span className="dot">⠀</span>
+        <span className="dot">•</span>
+        <span className="dot">•</span>
+        <span className="dot">•</span>
+        <span className="dot">•</span>
         <div className="end-time">
           <input
             className="timeBox"
@@ -69,7 +75,7 @@ const ExtraTaskItem = (props: ExtraTaskItemObject) => {
             style={{
                 textDecorationLine: task.isCompleted ? "line-through" : "none",
                 pointerEvents: task.isCompleted ? "none" : "initial",
-                color: task.isCompleted ? "#656f5c" : "#000000"
+                color: task.isCompleted ? "#656f5c" : "#f5f5f5"
             }}
             disabled={task.isCompleted}
           />
@@ -78,40 +84,54 @@ const ExtraTaskItem = (props: ExtraTaskItemObject) => {
 
       <div className="folder-container">
         <div className="upper-part">
-          <div className="tab"></div>
+          <div className="tab"/>
           <div className="progression-bar"></div>
         </div>
 
         <div className="folder">
-        <label className="checkbox">
-          <input 
-              className="checkbox"
-              type="checkbox"
-              checked={task.isCompleted}
-              onChange={handleChecked}
-              style={{}}
-          />
-          <span className="checkmark"></span>
+          <div className="folder-top">
+            <label className="checkbox">
+              <input 
+                  className="checkbox"
+                  type="checkbox"
+                  checked={task.isCompleted}
+                  onChange={handleChecked}
+                  style={{}}
+              />
+              <span className="checkmark"></span>
+            </label>
 
-      </label>
+            <input
+              className="textBox"
+              type="text"
+              value={task.task}
+              placeholder="Type your task here..."
+              onChange={handleChange}
+              style={{
+                  textDecorationLine: task.isCompleted ? "line-through" : "none",
+                  pointerEvents: task.isCompleted ? "none" : "initial",
+                  color: task.isCompleted ? "#656f5c" : "#000000"
+              }}
+              disabled={task.isCompleted}
+            />
+            <button
+              className="delete-button"
+              onClick={(event) => props.deleteTask(props.taskId, event)}
+            >X</button>
+          </div>
+
         <input
-          className="textBox"
+          className="notesBox"
           type="text"
-          value={task.task}
-          placeholder="Type your task here..."
-          onChange={handleChange}
+          value={task.notes}
+          placeholder="Extra notes here..."
+          onChange={handleNotes}
           style={{
               textDecorationLine: task.isCompleted ? "line-through" : "none",
               pointerEvents: task.isCompleted ? "none" : "initial",
-              color: task.isCompleted ? "#656f5c" : "#000000"
           }}
           disabled={task.isCompleted}
         />
-
-        <button
-          className="delete-button"
-          onClick={(event) => props.deleteTask(props.taskId, event)}
-        >X</button>
         </div>
       </div>
     </div>

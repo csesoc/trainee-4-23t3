@@ -54,7 +54,7 @@ function DailyTaskList() {
 	  <userContext.Provider value={tasks}>
 		<div className="dailyTaskList" ref={divRef}>
 			
-			<h2 className="Title">Daily Tasks</h2>
+			<h2 className="Title">Daily Habits</h2>
 
 			<div className="tasks">
 				{tasks.map((item: item) => (
